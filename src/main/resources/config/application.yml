@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: MoitAdmin
+    profiles:
+        active: dev
+    jackson:
+      serialization.write-dates-as-timestamps: false
+    
+    mvc:
+      view:
+        prefix: /WEB-INF/views/
+        suffix: .jsp
+        
+    jpa:
+        open-in-view: false
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+                implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+server:
+    session:
+        cookie:
+            http-only: true
+
+application:
